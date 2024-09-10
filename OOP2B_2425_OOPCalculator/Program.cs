@@ -18,6 +18,11 @@ namespace OOP2B_2425_OOPCalculator
 
             Console.WriteLine($"{a} divided by {b} is {Division(a,b)} r {Modulo(a,b)}");
 
+            displayerOfThings(5,6,'a');
+            displayerOfThings(5, 6, 'b');
+            displayerOfThings(5, 6, 'c');
+            displayerOfThings(5, 6, 'd');
+
             Console.ReadKey();
         }
 
@@ -31,6 +36,12 @@ namespace OOP2B_2425_OOPCalculator
             return a - b;
         }
 
+        /// <summary>
+        /// This is the method for multiplication. Hi Erin.
+        /// </summary>
+        /// <param name="a"> is a number</param>
+        /// <param name="b"> is a number</param>
+        /// <returns>retruns the product of a and b?</returns>
         static int Multiplication(int a, int b)
         {
             int prod = 0;
@@ -64,6 +75,25 @@ namespace OOP2B_2425_OOPCalculator
             }
 
             return a;
+        }
+
+        static void displayerOfThings(int a, int b, char mode)
+        {
+            switch(mode)
+            {
+                case 'a':
+                    Console.WriteLine($"{a} plus {b} is {Addition(a, b)}");
+                    break;
+                case 'b':
+                    Console.WriteLine($"{a} minus by {b} is {Subtraction(a, b)}");
+                    break;
+                case 'c':
+                    Console.WriteLine($"{a} multiplied by {b} is {Multiplication(a, b)}");
+                    break;
+                case 'd':
+                    Console.WriteLine($"{a} divided by {b} is {Division(a, b)} r {Modulo(a, b)}");
+                    break;
+            }
         }
     }
 }
